@@ -11,7 +11,7 @@ resource "aws_security_group" "allow_tls" {
     cidr_blocks      = ["0.0.0.0/0"]
     
   }
-  ngress {
+  ingress {
     description      = "TLS from VPC"
     from_port        = 22
     to_port          = 22
@@ -20,7 +20,7 @@ resource "aws_security_group" "allow_tls" {
     
   }
 
-ngress {
+  ingress {
     description      = "TLS from VPC"
     from_port        = 80
     to_port          = 80
